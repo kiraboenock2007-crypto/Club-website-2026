@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intellect Club | National Organization</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#222;line-height:1.6}
+
+/* Header */
+header{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:#fff;
+text-align:center;
+padding:60px 15px
+}
+header h1{font-size:clamp(2rem,5vw,3.5rem)}
+header p{font-size:clamp(1rem,3vw,1.2rem)}
+
+/* Navigation */
+nav{
+background:#162447;
+display:flex;
+justify-content:center;
+flex-wrap:wrap
+}
+nav a{
+color:#fff;
+padding:12px 18px;
+display:block;
+font-weight:bold
+}
+nav a:hover{background:#1f4068}
+
+/* Layout */
+.container{max-width:1200px;margin:auto;padding:20px}
+section{margin:50px 0}
+h2{color:#1f4068;margin-bottom:15px}
+
+/* Slideshow */
+.slideshow-container{
+width:100%;
+max-height:450px;
+overflow:hidden;
+border-radius:10px
+}
+.slides{
+width:100%;
+height:auto;
+display:none
+}
+
+/* Card */
+.card{
+background:#fff;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,.15)
+}
+
+/* Profile */
+.profile{
+display:flex;
+gap:25px;
+align-items:center;
+flex-wrap:wrap
+}
+.profile img{
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:6px solid #25D366
+}
+
+/* Upload */
+input,textarea,button{
+width:100%;
+padding:12px;
+margin:10px 0;
+font-size:1rem
+}
+button{
+background:#25D366;
+border:none;
+color:#fff;
+font-weight:bold;
+border-radius:6px
+}
+
+/* Footer */
+footer{
+background:#162447;
+color:#fff;
+text-align:center;
+padding:20px
+}
+
+/* WhatsApp */
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25D366;
+color:#fff;
+padding:14px 20px;
+border-radius:50px;
+font-weight:bold
+}
+
+/* Responsive tweaks */
+@media(max-width:600px){
+.profile{text-align:center}
+.profile img{margin:auto}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Intellect Club</h1>
+<p>National Organization for Knowledge, Leadership & Innovation</p>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#profile">Club Profile</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+<section id="home">
+<div class="slideshow-container">
+<img class="slides" src="images/slide1.jpg">
+<img class="slides" src="images/slide2.jpg">
+<img class="slides" src="images/slide3.jpg">
+</div>
+</section>
+
+<section id="about">
+<h2>About Us</h2>
+<div class="card">
+<p>Intellect Club is a national organization led by Kirabo Enock. We empower minds through education, leadership, innovation, and ethical engagement across communities.</p>
+</div>
+</section>
+
+<section id="profile">
+<h2>Club Profile</h2>
+<div class="card profile">
+<img src="images/owner.jpg" alt="Kirabo Enock">
+<div>
+<h3>Kirabo Enock</h3>
+<p><strong>Founder & National Coordinator</strong></p>
+<p>Leading Intellect Club with a vision of excellence, intellectual growth, and national impact.</p>
+</div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Contact Us</h2>
+<div class="card">
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<textarea name="message" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+</div>
+</section>
+
+</div>
+
+<footer>
+<p>© 2026 Intellect Club | Created by Kirabo Enock</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/256705760955">WhatsApp</a>
+
+<script>
+let i=0;
+function slides(){
+let s=document.getElementsByClassName("slides");
+for(let x of s){x.style.display="none";}
+i++; if(i>s.length){i=1}
+s[i-1].style.display="block";
+setTimeout(slides,5000);
+}
+slides();
+</script>
+
+</body>
+</html>
